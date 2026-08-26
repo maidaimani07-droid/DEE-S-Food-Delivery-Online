@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEE'S FOOD DELIVERY</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" onclick="scrollToTop()">
+                <img src="logo.png" alt="DEE'S FOOD DELIVERY" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="brand">DEE'S</span>
+                    <span class="brand-sub">FOOD DELIVERY</span>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="active">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#howto">How to Order</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="lang-switch">
+                <span class="lang-option active" data-lang="en">EN</span>
+                <span class="lang-option" data-lang="pt">PT</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <i class="fas fa-motorcycle"></i>
+                <span class="badge-text" data-en="Free Delivery in Tete" data-pt="Entrega Grátis em Tete">Free Delivery in Tete</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-line" data-en="Delicious Food" data-pt="Comida Deliciosa">Delicious Food</span>
+                <br>
+                <span class="hero-title-line" data-en="Delivered To You" data-pt="Entregue Para Si">Delivered To You</span>
+            </h1>
+
+            <p class="hero-subtitle" data-en="Order Your Food Today and Enjoy" data-pt="Peça Hoje e Aproveite">Order Your Food Today and Enjoy</p>
+
+            <p class="hero-description" data-en="Freshly prepared meals delivered hot and fast to your doorstep. Choose from our wide variety of delicious dishes." data-pt="Refeições frescas preparadas e entregues quentinhas à sua porta. Escolha entre nossa grande variedade de pratos deliciosos.">
+                Freshly prepared meals delivered hot and fast to your doorstep. Choose from our wide variety of delicious dishes.
+            </p>
+
+            <div class="hero-features">
+                <span><i class="fas fa-utensils"></i> <span data-en="Quality Food" data-pt="Comida de Qualidade">Quality Food</span></span>
+                <span><i class="fas fa-bolt"></i> <span data-en="Fast Delivery" data-pt="Entrega Rápida">Fast Delivery</span></span>
+                <span><i class="fas fa-clock"></i> <span data-en="Fresh Daily" data-pt="Fresco Diário">Fresh Daily</span></span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary btn-delivery">
+                    <i class="fas fa-utensil-spoon"></i>
+                    <span data-en="Order Now" data-pt="Peça Agora">Order Now</span>
+                </a>
+                <a href="#" class="btn btn-whatsapp" id="heroWhatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-en="WhatsApp" data-pt="WhatsApp">WhatsApp</span>
+                </a>
+                <a href="tel:+258864575995" class="btn btn-outline-light">
+                    <i class="fas fa-phone"></i>
+                    <span data-en="Call Us" data-pt="Ligue">Call Us</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label" data-en="Dishes" data-pt="Pratos">Dishes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15min</span>
+                    <span class="stat-label" data-en="Avg. Delivery" data-pt="Entrega Média">Avg. Delivery</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" data-en="Happy Customers" data-pt="Clientes Felizes">Happy Customers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Know <span>DEE'S</span></h2>
+            </div>
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-utensil-spoon"></i></div>
+                <p data-en="Delicious food, convenient ordering and reliable service. Choose your favourite meal, place your order through WhatsApp or call us directly, and enjoy your food." data-pt="Comida deliciosa, pedidos convenientes e serviço confiável. Escolha a sua refeição favorita, faça o pedido via WhatsApp ou ligue-nos diretamente e desfrute.">
+                    Delicious food, convenient ordering and reliable service. Choose your favourite meal, place your order through WhatsApp or call us directly, and enjoy your food.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU SECTION ===== -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Menu</span>
+                <h2 class="section-title">Explore <span>Categories</span></h2>
+            </div>
+
+            <div class="category-grid" id="categoryGrid"></div>
+
+            <div id="productDisplay">
+                <div class="category-header">
+                    <span id="categoryIcon"><i class="fas fa-fries"></i></span>
+                    <h3 id="categoryTitle">Chips</h3>
+                </div>
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW TO ORDER SECTION ===== -->
+    <section id="howto" class="howto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How to <span>Order</span></h2>
+            </div>
+
+            <div class="howto-grid">
+                <div class="howto-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-utensils"></i></div>
+                    <h4 data-en="Choose your food" data-pt="Escolha sua comida">Choose your food</h4>
+                    <p data-en="Browse our delicious menu" data-pt="Explore nosso menu">Browse our delicious menu</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h4 data-en="Select your meal" data-pt="Selecione sua refeição">Select your meal</h4>
+                    <p data-en="Pick your favourite dish" data-pt="Escolha seu prato">Pick your favourite dish</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4 data-en="Send your order" data-pt="Envie seu pedido">Send your order</h4>
+                    <p data-en="WhatsApp or call us" data-pt="WhatsApp ou ligue">WhatsApp or call us</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                    <h4 data-en="Confirm" data-pt="Confirme">Confirm</h4>
+                    <p data-en="We'll contact you back" data-pt="Entraremos em contato">We'll contact you back</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon"><i class="fas fa-smile"></i></div>
+                    <h4 data-en="Enjoy!" data-pt="Aproveite!">Enjoy!</h4>
+                    <p data-en="Fresh food delivered" data-pt="Comida fresca entregue">Fresh food delivered</p>
+                </div>
+            </div>
+
+            <div class="delivery-box">
+                <div class="delivery-icon"><i class="fas fa-truck"></i></div>
+                <div>
+                    <h3 data-en="Food Delivery" data-pt="Entrega de Comida">Food Delivery</h3>
+                    <p data-en="We deliver delicious food directly to you. Location: Tete, Bairro Azul, Mozambique. Contact us for delivery zones &amp; fees." data-pt="Entregamos comida deliciosa diretamente para você. Localização: Tete, Bairro Azul, Moçambique. Contacte-nos para zonas de entrega e taxas.">
+                        We deliver delicious food directly to you. <strong>Location:</strong> Tete, Bairro Azul, Mozambique. Contact us for delivery zones &amp; fees.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact <span>DEE'S</span></h2>
+            </div>
+
+            <div class="contact-box">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong data-en="Phone 1" data-pt="Telefone 1">Phone 1</strong>
+                            <span>+258 864 575 995</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong data-en="Phone 2" data-pt="Telefone 2">Phone 2</strong>
+                            <span>+258 817 930 51</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong data-en="WhatsApp" data-pt="WhatsApp">WhatsApp</strong>
+                            <span>+258 864 575 995</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong data-en="Location" data-pt="Localização">Location</strong>
+                            <span data-en="Tete, Bairro Azul, Mozambique" data-pt="Tete, Bairro Azul, Moçambique">Tete, Bairro Azul, Mozambique</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="#" class="btn btn-whatsapp" id="contactWhatsapp"><i class="fab fa-whatsapp"></i> <span data-en="WhatsApp" data-pt="WhatsApp">WhatsApp</span></a>
+                    <a href="tel:+258864575995" class="btn btn-primary"><i class="fas fa-phone"></i> <span data-en="Call +258 864 575 995" data-pt="Ligue +258 864 575 995">Call +258 864 575 995</span></a>
+                    <a href="tel:+25881793051" class="btn btn-outline"><i class="fas fa-phone"></i> <span data-en="Call +258 817 930 51" data-pt="Ligue +258 817 930 51">Call +258 817 930 51</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>DEE'S <span>FOOD DELIVERY</span></h3>
+                    <p class="footer-slogan" data-en="Order Your Food Today and Enjoy" data-pt="Peça Hoje e Aproveite">Order Your Food Today and Enjoy</p>
+                    <p class="footer-location"><i class="fas fa-map-pin"></i> <span data-en="Tete, Bairro Azul, Mozambique" data-pt="Tete, Bairro Azul, Moçambique">Tete, Bairro Azul, Mozambique</span></p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-pt="Links Rápidos">Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#howto">How to Order</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contato">Contact</h4>
+                    <p><i class="fas fa-phone"></i> +258 864 575 995</p>
+                    <p><i class="fas fa-phone"></i> +258 817 930 51</p>
+                    <p><i class="fab fa-whatsapp"></i> +258 864 575 995</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> DEE'S FOOD DELIVERY. <span data-en="All Rights Reserved" data-pt="Todos os Direitos Reservados">All Rights Reserved</span>.</p>
+                <p class="footer-made">Made with <i class="fas fa-heart"></i> <span data-en="in Mozambique" data-pt="em Moçambique">in Mozambique</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <button class="float-wa" id="floatWa">
+        <i class="fab fa-whatsapp"></i>
+        <span class="float-wa-tooltip" data-en="Order on WhatsApp" data-pt="Peça no WhatsApp">Order on WhatsApp</span>
+    </button>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
