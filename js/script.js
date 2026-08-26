@@ -82,10 +82,11 @@
     });
 
     // ============================================================
-    // 4. MENU DATA
+    // 4. MENU DATA WITH JPG IMAGES
     // ============================================================
     const menuData = {
         "Samosa": {
+            image: "images/samosa.jpg",
             icon: "fa-utensils",
             items: [
                 { name: "Samosa with Fish", desc: "Crispy samosa with fish filling", price: 250 },
@@ -96,6 +97,7 @@
             ]
         },
         "Fried Rice": {
+            image: "images/fried-rice.jpg",
             icon: "fa-utensil-spoon",
             items: [
                 { name: "Fried Rice with Chicken", desc: "Wok-fried rice with chicken", price: 350 },
@@ -106,6 +108,7 @@
             ]
         },
         "Meat Pie": {
+            image: "images/meat-pie.jpg",
             icon: "fa-pie-chart",
             items: [
                 { name: "Chicken Meat Pie", desc: "Flaky pie with chicken", price: 180 },
@@ -115,6 +118,7 @@
             ]
         },
         "Cakes": {
+            image: "images/cakes.jpg",
             icon: "fa-birthday-cake",
             items: [
                 { name: "Birthday Cakes", desc: "Custom birthday cake", price: 500 },
@@ -126,6 +130,7 @@
             ]
         },
         "Mandasi": {
+            image: "images/mandasi.jpg",
             icon: "fa-doughnut",
             items: [
                 { name: "Plain Mandasi", desc: "Traditional plain mandasi", price: 80 },
@@ -135,6 +140,7 @@
             ]
         },
         "Chips": {
+            image: "images/chips.jpg",
             icon: "fa-fries",
             items: [
                 { name: "Dry Chips", desc: "Crispy dry chips", price: 150 },
@@ -198,7 +204,7 @@
     });
 
     // ============================================================
-    // 6. RENDER CATEGORIES
+    // 6. RENDER CATEGORIES WITH IMAGES
     // ============================================================
     const categoryGrid = document.getElementById('categoryGrid');
     const productGrid = document.getElementById('productGrid');
@@ -213,7 +219,7 @@
             const card = document.createElement('div');
             card.className = 'category-card';
             card.innerHTML = `
-                <span class="category-icon"><i class="fas ${data.icon}"></i></span>
+                <img src="${data.image}" alt="${cat}" class="category-image" onerror="this.style.display='none'">
                 <div class="category-name">${cat}</div>
             `;
             card.dataset.category = cat;
@@ -222,7 +228,7 @@
             });
             categoryGrid.appendChild(card);
         });
-        console.log('✅ Categories rendered');
+        console.log('✅ Categories rendered with JPG images');
     }
 
     // ============================================================
