@@ -162,6 +162,7 @@ header {
     align-items: center;
     cursor: pointer;
     gap: 2px;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -304,7 +305,7 @@ header {
 }
 
 /* ============================================ */
-/* HERO / HOME SECTION - REDUCED SIZE */
+/* HERO / HOME SECTION - WITH LOGO BACKGROUND */
 /* ============================================ */
 .hero {
     background: linear-gradient(145deg, #0f1a12 0%, #1a2e22 40%, #234a32 70%, #1a2e22 100%);
@@ -314,6 +315,19 @@ header {
     min-height: 60vh;
     display: flex;
     align-items: center;
+}
+
+/* Logo as full coverage background - 1.2% opacity */
+.hero-logo-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../logo.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.012;
+    pointer-events: none;
+    transform: scale(1.1);
 }
 
 .hero-overlay {
@@ -448,6 +462,10 @@ header {
 /* ============================================ */
 /* ABOUT */
 /* ============================================ */
+.about-box, .about-section {
+    padding: 20px 0 60px;
+}
+
 .about-box {
     max-width: 760px;
     margin: 0 auto;
@@ -470,6 +488,13 @@ header {
     color: #444;
     line-height: 1.8;
     font-family: 'Inter', sans-serif;
+}
+
+/* ============================================ */
+/* MENU SECTION */
+/* ============================================ */
+.menu-section {
+    padding: 20px 0 60px;
 }
 
 /* ============================================ */
@@ -636,6 +661,10 @@ header {
 /* ============================================ */
 /* HOW TO ORDER */
 /* ============================================ */
+.howto-section {
+    padding: 20px 0 60px;
+}
+
 .howto-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -728,6 +757,10 @@ header {
 /* ============================================ */
 /* CONTACT */
 /* ============================================ */
+.contact-section {
+    padding: 20px 0 60px;
+}
+
 .contact-box {
     background: var(--white);
     padding: 36px 44px;

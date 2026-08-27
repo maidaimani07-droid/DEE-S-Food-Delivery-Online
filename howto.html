@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEE'S FOOD DELIVERY - Home</title>
+    <title>DEE'S FOOD DELIVERY - How to Order</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,10 +34,10 @@
             </button>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="about.html">About</a>
-                <a href="howto.html">How to Order</a>
+                <a href="howto.html" class="active">How to Order</a>
                 <a href="contact.html">Contact</a>
             </nav>
 
@@ -48,43 +48,55 @@
         </div>
     </header>
 
-    <!-- ===== HERO / HOME SECTION ===== -->
-    <section id="home" class="hero">
-        <div class="hero-logo-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-badge">
-                <i class="fas fa-motorcycle"></i>
-                <span class="badge-text" data-en="Free Delivery in Tete" data-pt="Entrega Grátis em Tete">Free Delivery in Tete</span>
+    <!-- ===== HOW TO ORDER SECTION ===== -->
+    <section id="howto" class="howto-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How to <span>Order</span></h2>
             </div>
 
-            <h1 class="hero-title">
-                <span class="hero-title-line" data-en="Delicious Food" data-pt="Comida Deliciosa">Delicious Food</span>
-                <br>
-                <span class="hero-title-line" data-en="Delivered To You" data-pt="Entregue Para Si">Delivered To You</span>
-            </h1>
-
-            <p class="hero-subtitle" data-en="Order Your Food Today and Enjoy" data-pt="Peça Hoje e Aproveite">Order Your Food Today and Enjoy</p>
-
-            <div class="hero-features">
-                <span><i class="fas fa-utensils"></i> <span data-en="Quality Food" data-pt="Comida de Qualidade">Quality Food</span></span>
-                <span><i class="fas fa-bolt"></i> <span data-en="Fast Delivery" data-pt="Entrega Rápida">Fast Delivery</span></span>
-                <span><i class="fas fa-clock"></i> <span data-en="Fresh Daily" data-pt="Fresco Diário">Fresh Daily</span></span>
+            <div class="howto-grid">
+                <div class="howto-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-utensils"></i></div>
+                    <h4 data-en="Choose your food" data-pt="Escolha sua comida">Choose your food</h4>
+                    <p data-en="Browse our delicious menu" data-pt="Explore nosso menu">Browse our delicious menu</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h4 data-en="Select your meal" data-pt="Selecione sua refeição">Select your meal</h4>
+                    <p data-en="Pick your favourite dish" data-pt="Escolha seu prato">Pick your favourite dish</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4 data-en="Send your order" data-pt="Envie seu pedido">Send your order</h4>
+                    <p data-en="WhatsApp or call us" data-pt="WhatsApp ou ligue">WhatsApp or call us</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                    <h4 data-en="Confirm" data-pt="Confirme">Confirm</h4>
+                    <p data-en="We'll contact you back" data-pt="Entraremos em contato">We'll contact you back</p>
+                </div>
+                <div class="howto-step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon"><i class="fas fa-smile"></i></div>
+                    <h4 data-en="Enjoy!" data-pt="Aproveite!">Enjoy!</h4>
+                    <p data-en="Fresh food delivered" data-pt="Comida fresca entregue">Fresh food delivered</p>
+                </div>
             </div>
 
-            <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary btn-delivery">
-                    <i class="fas fa-utensil-spoon"></i>
-                    <span data-en="Order Now" data-pt="Peça Agora">Order Now</span>
-                </a>
-                <a href="#" class="btn btn-whatsapp" id="heroWhatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-en="WhatsApp" data-pt="WhatsApp">WhatsApp</span>
-                </a>
-                <a href="tel:+258864575995" class="btn btn-outline-light">
-                    <i class="fas fa-phone"></i>
-                    <span data-en="Call Us" data-pt="Ligue">Call Us</span>
-                </a>
+            <div class="delivery-box">
+                <div class="delivery-icon"><i class="fas fa-truck"></i></div>
+                <div>
+                    <h3 data-en="Food Delivery" data-pt="Entrega de Comida">Food Delivery</h3>
+                    <p data-en="We deliver delicious food directly to you. Location: Tete, Bairro Azul, Mozambique. Contact us for delivery zones &amp; fees." data-pt="Entregamos comida deliciosa diretamente para você. Localização: Tete, Bairro Azul, Moçambique. Contacte-nos para zonas de entrega e taxas.">
+                        We deliver delicious food directly to you. <strong>Location:</strong> Tete, Bairro Azul, Mozambique. Contact us for delivery zones &amp; fees.
+                    </p>
+                </div>
             </div>
         </div>
     </section>

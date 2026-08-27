@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEE'S FOOD DELIVERY - Home</title>
+    <title>DEE'S FOOD DELIVERY - Menu</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +34,8 @@
             </button>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="active">Home</a>
-                <a href="menu.html">Menu</a>
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
                 <a href="about.html">About</a>
                 <a href="howto.html">How to Order</a>
                 <a href="contact.html">Contact</a>
@@ -48,43 +48,22 @@
         </div>
     </header>
 
-    <!-- ===== HERO / HOME SECTION ===== -->
-    <section id="home" class="hero">
-        <div class="hero-logo-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-badge">
-                <i class="fas fa-motorcycle"></i>
-                <span class="badge-text" data-en="Free Delivery in Tete" data-pt="Entrega Grátis em Tete">Free Delivery in Tete</span>
+    <!-- ===== MENU SECTION ===== -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Menu</span>
+                <h2 class="section-title">Explore <span>Categories</span></h2>
             </div>
 
-            <h1 class="hero-title">
-                <span class="hero-title-line" data-en="Delicious Food" data-pt="Comida Deliciosa">Delicious Food</span>
-                <br>
-                <span class="hero-title-line" data-en="Delivered To You" data-pt="Entregue Para Si">Delivered To You</span>
-            </h1>
+            <div class="category-grid" id="categoryGrid"></div>
 
-            <p class="hero-subtitle" data-en="Order Your Food Today and Enjoy" data-pt="Peça Hoje e Aproveite">Order Your Food Today and Enjoy</p>
-
-            <div class="hero-features">
-                <span><i class="fas fa-utensils"></i> <span data-en="Quality Food" data-pt="Comida de Qualidade">Quality Food</span></span>
-                <span><i class="fas fa-bolt"></i> <span data-en="Fast Delivery" data-pt="Entrega Rápida">Fast Delivery</span></span>
-                <span><i class="fas fa-clock"></i> <span data-en="Fresh Daily" data-pt="Fresco Diário">Fresh Daily</span></span>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary btn-delivery">
-                    <i class="fas fa-utensil-spoon"></i>
-                    <span data-en="Order Now" data-pt="Peça Agora">Order Now</span>
-                </a>
-                <a href="#" class="btn btn-whatsapp" id="heroWhatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                    <span data-en="WhatsApp" data-pt="WhatsApp">WhatsApp</span>
-                </a>
-                <a href="tel:+258864575995" class="btn btn-outline-light">
-                    <i class="fas fa-phone"></i>
-                    <span data-en="Call Us" data-pt="Ligue">Call Us</span>
-                </a>
+            <div id="productDisplay">
+                <div class="category-header">
+                    <span id="categoryIcon"><i class="fas fa-fries"></i></span>
+                    <h3 id="categoryTitle">Chips</h3>
+                </div>
+                <div class="product-grid" id="productGrid"></div>
             </div>
         </div>
     </section>
