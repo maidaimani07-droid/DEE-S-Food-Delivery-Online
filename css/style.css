@@ -155,7 +155,7 @@ header {
     gap: 16px;
 }
 
-/* ===== LOGO - IMAGE ABOVE TEXT ===== */
+/* ===== LOGO ===== */
 .logo {
     display: flex;
     flex-direction: column;
@@ -203,7 +203,7 @@ header {
 }
 
 /* ============================================ */
-/* NAVIGATION - BOLD SANS-SERIF */
+/* NAVIGATION */
 /* ============================================ */
 .nav-menu {
     display: flex;
@@ -305,7 +305,7 @@ header {
 }
 
 /* ============================================ */
-/* HERO / HOME SECTION - WITH LOGO BACKGROUND */
+/* HERO */
 /* ============================================ */
 .hero {
     background: linear-gradient(145deg, #0f1a12 0%, #1a2e22 40%, #234a32 70%, #1a2e22 100%);
@@ -317,11 +317,10 @@ header {
     align-items: center;
 }
 
-/* Logo as full coverage background - 1.2% opacity */
 .hero-logo-bg {
     position: absolute;
     inset: 0;
-    background-image: url('../logo.png');
+    background-image: url('logo.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -389,7 +388,7 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-/* ===== HERO FEATURES WITH .jpeg IMAGES ===== */
+/* ===== HERO FEATURES - ICON BASED ===== */
 .hero-features {
     display: flex;
     justify-content: center;
@@ -405,17 +404,23 @@ header {
     gap: 6px;
 }
 
-.hero-feature-image {
+.hero-feature-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    object-fit: cover;
+    background: rgba(255, 255, 255, 0.10);
     border: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--primary-light);
     transition: var(--transition);
 }
 
-.hero-feature-image:hover {
+.hero-feature-icon:hover {
     transform: scale(1.08);
+    background: rgba(255, 255, 255, 0.20);
     border-color: var(--primary-light);
 }
 
@@ -514,11 +519,11 @@ header {
 }
 
 /* ============================================ */
-/* CATEGORY CARDS WITH .jpeg IMAGES */
+/* CATEGORY CARDS - ICON BASED */
 /* ============================================ */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 24px;
     margin: 10px 0 30px;
 }
@@ -531,7 +536,7 @@ header {
     cursor: pointer;
     transition: var(--transition);
     border: 2px solid transparent;
-    overflow: hidden;
+    padding: 30px 16px 24px;
 }
 
 .category-card:hover {
@@ -540,25 +545,18 @@ header {
     box-shadow: var(--shadow-hover);
 }
 
-.category-card .category-image {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
+.category-card .category-icon {
+    font-size: 3.5rem;
+    color: var(--primary);
     display: block;
-    transition: var(--transition);
-}
-
-.category-card:hover .category-image {
-    transform: scale(1.05);
+    padding: 5px 0 10px;
 }
 
 .category-card .category-name {
-    padding: 14px 12px;
     font-weight: 600;
     color: var(--dark);
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
-    background: var(--white);
 }
 
 /* ============================================ */
@@ -1042,15 +1040,13 @@ footer {
     .hero-features {
         gap: 24px;
     }
-    .hero-feature-image {
+    .hero-feature-icon {
         width: 42px;
         height: 42px;
+        font-size: 1.1rem;
     }
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .category-card .category-image {
-        height: 130px;
     }
 }
 
@@ -1100,9 +1096,10 @@ footer {
     .hero-features {
         gap: 16px;
     }
-    .hero-feature-image {
+    .hero-feature-icon {
         width: 38px;
         height: 38px;
+        font-size: 1rem;
     }
     .hero-feature-label {
         font-size: 0.75rem;
@@ -1117,9 +1114,6 @@ footer {
     }
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .category-card .category-image {
-        height: 110px;
     }
     .contact-box {
         flex-direction: column;
@@ -1153,9 +1147,10 @@ footer {
         flex-wrap: wrap;
         margin-bottom: 18px;
     }
-    .hero-feature-image {
+    .hero-feature-icon {
         width: 34px;
         height: 34px;
+        font-size: 0.9rem;
     }
     .hero-feature-label {
         font-size: 0.7rem;
@@ -1186,11 +1181,13 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 12px;
     }
-    .category-card .category-image {
-        height: 90px;
+    .category-card {
+        padding: 16px 8px;
+    }
+    .category-card .category-icon {
+        font-size: 2.5rem;
     }
     .category-card .category-name {
-        padding: 10px 8px;
         font-size: 0.85rem;
     }
     .product-grid {
@@ -1275,8 +1272,8 @@ footer {
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .category-card .category-image {
-        height: 80px;
+    .category-card .category-icon {
+        font-size: 2.2rem;
     }
     .product-grid {
         grid-template-columns: 1fr;
@@ -1293,9 +1290,10 @@ footer {
     .hero-subtitle {
         font-size: 0.8rem;
     }
-    .hero-feature-image {
+    .hero-feature-icon {
         width: 30px;
         height: 30px;
+        font-size: 0.8rem;
     }
     .hero-feature-label {
         font-size: 0.65rem;

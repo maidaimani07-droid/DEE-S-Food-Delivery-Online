@@ -88,7 +88,7 @@
     });
 
     // ============================================================
-    // 5. MENU DATA WITH .jpeg IMAGES
+    // 5. MENU DATA - ICON BASED (No images needed)
     // ============================================================
     const isMenuPage = window.location.pathname.includes('menu.html') || 
                        window.location.pathname.endsWith('/menu') ||
@@ -97,7 +97,6 @@
     if (isMenuPage) {
         const menuData = {
             "Samosa": {
-                image: "images/samosa.jpeg",
                 icon: "fa-utensils",
                 items: [
                     { name: "Samosa with Fish", desc: "Crispy samosa with fish filling", price: 250 },
@@ -108,7 +107,6 @@
                 ]
             },
             "Fried Rice": {
-                image: "images/fried-rice.jpeg",
                 icon: "fa-utensil-spoon",
                 items: [
                     { name: "Fried Rice with Chicken", desc: "Wok-fried rice with chicken", price: 350 },
@@ -119,7 +117,6 @@
                 ]
             },
             "Meat Pie": {
-                image: "images/meat-pie.jpeg",
                 icon: "fa-pie-chart",
                 items: [
                     { name: "Chicken Meat Pie", desc: "Flaky pie with chicken", price: 180 },
@@ -129,7 +126,6 @@
                 ]
             },
             "Cakes": {
-                image: "images/cakes.jpeg",
                 icon: "fa-birthday-cake",
                 items: [
                     { name: "Birthday Cakes", desc: "Custom birthday cake", price: 500 },
@@ -141,7 +137,6 @@
                 ]
             },
             "Mandasi": {
-                image: "images/mandasi.jpeg",
                 icon: "fa-doughnut",
                 items: [
                     { name: "Plain Mandasi", desc: "Traditional plain mandasi", price: 80 },
@@ -151,7 +146,6 @@
                 ]
             },
             "Chips": {
-                image: "images/chips.jpeg",
                 icon: "fa-fries",
                 items: [
                     { name: "Dry Chips", desc: "Crispy dry chips", price: 150 },
@@ -180,7 +174,7 @@
                 const card = document.createElement('div');
                 card.className = 'category-card';
                 card.innerHTML = `
-                    <img src="${data.image}" alt="${cat}" class="category-image" onerror="this.style.display='none'">
+                    <span class="category-icon"><i class="fas ${data.icon}"></i></span>
                     <div class="category-name">${cat}</div>
                 `;
                 card.dataset.category = cat;
@@ -189,7 +183,7 @@
                 });
                 categoryGrid.appendChild(card);
             });
-            console.log('✅ Categories rendered with .jpeg images');
+            console.log('✅ Categories rendered with icons');
         }
 
         function showCategory(cat) {
