@@ -17,10 +17,8 @@
                 behavior: 'smooth'
             });
         }
-        // Close mobile menu
         const navMenu = document.getElementById('navMenu');
         if (navMenu) navMenu.classList.remove('active');
-        // Reset hamburger icon
         const hamburger = document.getElementById('hamburger');
         if (hamburger) {
             const icon = hamburger.querySelector('i');
@@ -32,7 +30,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Make functions globally accessible
     window.scrollToSection = scrollToSection;
     window.scrollToTop = scrollToTop;
 
@@ -69,13 +66,11 @@
         });
     }
 
-    // Close menu on link click
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             scrollToSection(targetId);
-            // Update active state
             document.querySelectorAll('.nav-menu a').forEach(l => l.classList.remove('active'));
             this.classList.add('active');
         });
@@ -165,18 +160,15 @@
     };
 
     function setLanguage(lang) {
-        // Update language switch
         document.querySelectorAll('.lang-option').forEach(el => {
             el.classList.toggle('active', el.dataset.lang === lang);
         });
 
-        // Update all elements with data-en/data-pt attributes
         document.querySelectorAll('[data-en][data-pt]').forEach(el => {
             const text = el.getAttribute('data-' + lang);
             if (text) el.textContent = text;
         });
 
-        // Update button texts
         const t = translations[lang] || translations.en;
         const heroBtn = document.getElementById('heroWhatsapp');
         if (heroBtn) {
@@ -188,7 +180,6 @@
             const span = contactBtn.querySelector('span');
             if (span) span.textContent = t.orderNow;
         }
-        // Floating WhatsApp tooltip
         const floatTooltip = document.querySelector('.float-wa-tooltip');
         if (floatTooltip) {
             const text = floatTooltip.getAttribute('data-' + lang);
@@ -196,7 +187,6 @@
         }
     }
 
-    // Language switch event listeners
     document.querySelectorAll('.lang-option').forEach(option => {
         option.addEventListener('click', function() {
             setLanguage(this.dataset.lang);
@@ -262,7 +252,6 @@
             productGrid.appendChild(card);
         });
 
-        // Scroll to products
         const display = document.getElementById('productDisplay');
         if (display) {
             display.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -341,7 +330,6 @@
         showCategory('Chips');
         setLanguage('en');
 
-        // Update footer year
         const yearEl = document.getElementById('currentYear');
         if (yearEl) {
             yearEl.textContent = new Date().getFullYear();
