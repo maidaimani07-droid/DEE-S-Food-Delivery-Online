@@ -155,17 +155,17 @@ header {
     gap: 16px;
 }
 
+/* ===== LOGO ===== */
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 14px;
     cursor: pointer;
-    gap: 2px;
     text-decoration: none;
 }
 
 .logo-img {
-    height: 75px;
+    height: 60px;
     width: auto;
     border-radius: 12px;
     object-fit: contain;
@@ -179,13 +179,11 @@ header {
 .logo-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
     line-height: 1.1;
-    text-align: center;
 }
 
 .logo-text .brand {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #e67e22;
     letter-spacing: -0.5px;
@@ -193,20 +191,23 @@ header {
 }
 
 .logo-text .brand-sub {
-    font-weight: 500;
-    font-size: 0.75rem;
-    color: #1a1a2e;
-    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 0.65rem;
+    color: var(--gray);
+    letter-spacing: 1.5px;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
 }
 
+/* ============================================ */
+/* NAVIGATION */
+/* ============================================ */
 .nav-menu {
     display: flex;
     gap: 32px;
     font-weight: 700;
     font-size: 0.95rem;
-    font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-menu a {
@@ -217,7 +218,6 @@ header {
     cursor: pointer;
     opacity: 0.6;
     text-decoration: none;
-    letter-spacing: 0.3px;
     font-weight: 700;
 }
 
@@ -239,12 +239,6 @@ header {
     border-radius: 2px;
 }
 
-.nav-menu a:hover {
-    opacity: 1;
-    color: var(--primary);
-    font-weight: 800;
-}
-
 .nav-menu a.active::after {
     width: 100%;
 }
@@ -253,6 +247,14 @@ header {
     width: 100%;
 }
 
+.nav-menu a:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+/* ============================================ */
+/* LANGUAGE SWITCH */
+/* ============================================ */
 .lang-switch {
     display: flex;
     gap: 4px;
@@ -263,7 +265,7 @@ header {
     font-size: 0.8rem;
     font-weight: 700;
     border: 1px solid var(--light-gray);
-    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .lang-switch .lang-option {
@@ -369,7 +371,7 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-/* ===== HERO FEATURES WITH IMAGES ===== */
+/* ===== HERO FEATURES WITH .jpg IMAGES ===== */
 .hero-features {
     display: flex;
     justify-content: center;
@@ -1051,13 +1053,13 @@ footer {
         margin-left: auto;
     }
     .logo-img {
-        height: 60px;
+        height: 50px;
     }
     .logo-text .brand {
         font-size: 1.3rem;
     }
     .logo-text .brand-sub {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
     }
     .hero {
         padding: 40px 0 50px;
@@ -1227,13 +1229,13 @@ footer {
         font-size: 1rem;
     }
     .logo-img {
-        height: 50px;
+        height: 42px;
     }
     .logo-text .brand {
         font-size: 1.1rem;
     }
     .logo-text .brand-sub {
-        font-size: 0.55rem;
+        font-size: 0.5rem;
     }
     .nav-menu a {
         font-size: 1rem;
@@ -1281,13 +1283,13 @@ footer {
         padding: 10px 16px;
     }
     .logo-img {
-        height: 42px;
+        height: 36px;
     }
     .logo-text .brand {
         font-size: 0.95rem;
     }
     .logo-text .brand-sub {
-        font-size: 0.5rem;
+        font-size: 0.45rem;
     }
     .nav-menu a {
         font-size: 0.9rem;

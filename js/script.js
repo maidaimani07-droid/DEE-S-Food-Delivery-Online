@@ -88,7 +88,7 @@
     });
 
     // ============================================================
-    // 5. MENU DATA WITH IMAGES
+    // 5. MENU DATA WITH .jpg IMAGES
     // ============================================================
     const isMenuPage = window.location.pathname.includes('menu.html') || 
                        window.location.pathname.endsWith('/menu') ||
@@ -97,7 +97,7 @@
     if (isMenuPage) {
         const menuData = {
             "Samosa": {
-                image: "images/samosa.jpeg",
+                image: "images/samosa.jpg",
                 icon: "fa-utensils",
                 items: [
                     { name: "Samosa with Fish", desc: "Crispy samosa with fish filling", price: 250 },
@@ -108,7 +108,7 @@
                 ]
             },
             "Fried Rice": {
-                image: "images/fried-rice.jpeg",
+                image: "images/fried-rice.jpg",
                 icon: "fa-utensil-spoon",
                 items: [
                     { name: "Fried Rice with Chicken", desc: "Wok-fried rice with chicken", price: 350 },
@@ -119,7 +119,7 @@
                 ]
             },
             "Meat Pie": {
-                image: "images/meat-pie.jpeg",
+                image: "images/meat-pie.jpg",
                 icon: "fa-pie-chart",
                 items: [
                     { name: "Chicken Meat Pie", desc: "Flaky pie with chicken", price: 180 },
@@ -129,7 +129,7 @@
                 ]
             },
             "Cakes": {
-                image: "images/cakes.jpeg",
+                image: "images/cakes.jpg",
                 icon: "fa-birthday-cake",
                 items: [
                     { name: "Birthday Cakes", desc: "Custom birthday cake", price: 500 },
@@ -141,7 +141,7 @@
                 ]
             },
             "Mandasi": {
-                image: "images/mandasi.jpeg",
+                image: "images/mandasi.jpg",
                 icon: "fa-doughnut",
                 items: [
                     { name: "Plain Mandasi", desc: "Traditional plain mandasi", price: 80 },
@@ -151,7 +151,7 @@
                 ]
             },
             "Chips": {
-                image: "images/chips.jpeg",
+                image: "images/chips.jpg",
                 icon: "fa-fries",
                 items: [
                     { name: "Dry Chips", desc: "Crispy dry chips", price: 150 },
@@ -180,7 +180,7 @@
                 const card = document.createElement('div');
                 card.className = 'category-card';
                 card.innerHTML = `
-                    <img src="${data.image}" alt="${cat}" class="category-image">
+                    <img src="${data.image}" alt="${cat}" class="category-image" onerror="this.style.display='none'">
                     <div class="category-name">${cat}</div>
                 `;
                 card.dataset.category = cat;
@@ -189,7 +189,7 @@
                 });
                 categoryGrid.appendChild(card);
             });
-            console.log('✅ Categories rendered with images');
+            console.log('✅ Categories rendered with .jpg images');
         }
 
         function showCategory(cat) {
