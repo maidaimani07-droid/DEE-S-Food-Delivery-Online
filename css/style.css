@@ -155,17 +155,18 @@ header {
     gap: 16px;
 }
 
-/* ===== LOGO ===== */
+/* ===== LOGO - IMAGE ABOVE TEXT ===== */
 .logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 14px;
     cursor: pointer;
     text-decoration: none;
+    gap: 4px;
 }
 
 .logo-img {
-    height: 55px;
+    height: 65px;
     width: auto;
     border-radius: 12px;
     object-fit: contain;
@@ -179,7 +180,9 @@ header {
 .logo-text {
     display: flex;
     flex-direction: column;
+    align-items: center;
     line-height: 1.1;
+    text-align: center;
 }
 
 .logo-text .brand {
@@ -300,7 +303,7 @@ header {
 }
 
 /* ============================================ */
-/* HERO - WITH LOGO BACKGROUND */
+/* HERO - WITH LOGO BACKGROUND (6% OPACITY) */
 /* ============================================ */
 .hero {
     background: linear-gradient(145deg, #0f1a12 0%, #1a2e22 40%, #234a32 70%, #1a2e22 100%);
@@ -312,7 +315,7 @@ header {
     align-items: center;
 }
 
-/* Logo as full coverage background - fills entire hero */
+/* Logo as full coverage background - 6% opacity */
 .hero-logo-bg {
     position: absolute;
     inset: 0;
@@ -320,7 +323,7 @@ header {
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.04;
+    opacity: 0.06;
     pointer-events: none;
     transform: scale(1.1);
 }
@@ -343,10 +346,9 @@ header {
     margin: 0 auto;
 }
 
+/* ===== HERO BADGE - NO ICON ===== */
 .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    display: inline-block;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
     padding: 6px 22px;
@@ -358,10 +360,7 @@ header {
     margin-bottom: 28px;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
-}
-
-.hero-badge i {
-    color: var(--primary-light);
+    color: var(--white);
 }
 
 .hero-title {
@@ -1071,7 +1070,7 @@ footer {
         margin-left: auto;
     }
     .logo-img {
-        height: 45px;
+        height: 55px;
     }
     .logo-text .brand {
         font-size: 1.2rem;
@@ -1247,7 +1246,7 @@ footer {
         font-size: 1rem;
     }
     .logo-img {
-        height: 38px;
+        height: 45px;
     }
     .logo-text .brand {
         font-size: 1rem;
@@ -1301,7 +1300,7 @@ footer {
         padding: 10px 16px;
     }
     .logo-img {
-        height: 32px;
+        height: 38px;
     }
     .logo-text .brand {
         font-size: 0.85rem;
