@@ -261,7 +261,32 @@
     }
 
     // ============================================================
-    // 7. INITIALIZATION
+    // 7. ACTIVE NAV LINK ON SCROLL
+    // ============================================================
+    const sections = ['home', 'about', 'menu', 'howto', 'contact'];
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    window.addEventListener('scroll', function() {
+        let current = 'home';
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150) {
+                    current = id;
+                }
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // ============================================================
+    // 8. INITIALIZATION
     // ============================================================
     function init() {
         console.log('🚀 DEE\'S FOOD DELIVERY Initialized');

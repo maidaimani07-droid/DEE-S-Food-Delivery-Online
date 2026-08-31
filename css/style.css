@@ -165,7 +165,7 @@ header {
 }
 
 .logo-img {
-    height: 60px;
+    height: 55px;
     width: auto;
     border-radius: 12px;
     object-fit: contain;
@@ -300,7 +300,7 @@ header {
 }
 
 /* ============================================ */
-/* HERO */
+/* HERO - WITH LOGO BACKGROUND */
 /* ============================================ */
 .hero {
     background: linear-gradient(145deg, #0f1a12 0%, #1a2e22 40%, #234a32 70%, #1a2e22 100%);
@@ -312,10 +312,24 @@ header {
     align-items: center;
 }
 
+/* Logo as full coverage background - fills entire hero */
+.hero-logo-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../logo.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.04;
+    pointer-events: none;
+    transform: scale(1.1);
+}
+
+/* Dark overlay on top of logo for readability */
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(145deg, rgba(15, 26, 18, 0.80) 0%, rgba(26, 46, 34, 0.65) 40%, rgba(35, 74, 50, 0.70) 70%, rgba(26, 46, 34, 0.80) 100%);
+    background: linear-gradient(145deg, rgba(15, 26, 18, 0.75) 0%, rgba(26, 46, 34, 0.60) 40%, rgba(35, 74, 50, 0.65) 70%, rgba(26, 46, 34, 0.75) 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -356,6 +370,7 @@ header {
     letter-spacing: -1.5px;
     line-height: 1.05;
     margin-bottom: 4px;
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 .hero-title-line {
@@ -371,7 +386,7 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-/* ===== HERO FEATURES WITH .jpg IMAGES ===== */
+/* ===== HERO FEATURES ===== */
 .hero-features {
     display: flex;
     justify-content: center;
@@ -716,6 +731,9 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
+/* ============================================ */
+/* DELIVERY BOX */
+/* ============================================ */
 .delivery-box {
     background: var(--primary-pale);
     padding: 28px 36px;
@@ -1053,13 +1071,13 @@ footer {
         margin-left: auto;
     }
     .logo-img {
-        height: 50px;
+        height: 45px;
     }
     .logo-text .brand {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .logo-text .brand-sub {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
     }
     .hero {
         padding: 40px 0 50px;
@@ -1229,13 +1247,13 @@ footer {
         font-size: 1rem;
     }
     .logo-img {
-        height: 42px;
+        height: 38px;
     }
     .logo-text .brand {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .logo-text .brand-sub {
-        font-size: 0.5rem;
+        font-size: 0.45rem;
     }
     .nav-menu a {
         font-size: 1rem;
@@ -1283,13 +1301,13 @@ footer {
         padding: 10px 16px;
     }
     .logo-img {
-        height: 36px;
+        height: 32px;
     }
     .logo-text .brand {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
     .logo-text .brand-sub {
-        font-size: 0.45rem;
+        font-size: 0.4rem;
     }
     .nav-menu a {
         font-size: 0.9rem;
