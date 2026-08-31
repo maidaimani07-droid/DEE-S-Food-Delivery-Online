@@ -155,18 +155,17 @@ header {
     gap: 16px;
 }
 
-/* ===== LOGO - IMAGE ABOVE TEXT ===== */
+/* ===== LOGO - IMAGE AND TEXT ON SAME LINE ===== */
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 14px;
     cursor: pointer;
     text-decoration: none;
-    gap: 4px;
 }
 
 .logo-img {
-    height: 65px;
+    height: 55px;
     width: auto;
     border-radius: 12px;
     object-fit: contain;
@@ -180,9 +179,7 @@ header {
 .logo-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
     line-height: 1.1;
-    text-align: center;
 }
 
 .logo-text .brand {
@@ -1070,7 +1067,7 @@ footer {
         margin-left: auto;
     }
     .logo-img {
-        height: 55px;
+        height: 45px;
     }
     .logo-text .brand {
         font-size: 1.2rem;
@@ -1246,7 +1243,7 @@ footer {
         font-size: 1rem;
     }
     .logo-img {
-        height: 45px;
+        height: 40px;
     }
     .logo-text .brand {
         font-size: 1rem;
@@ -1300,7 +1297,7 @@ footer {
         padding: 10px 16px;
     }
     .logo-img {
-        height: 38px;
+        height: 35px;
     }
     .logo-text .brand {
         font-size: 0.85rem;
