@@ -88,7 +88,7 @@
     });
 
     // ============================================================
-    // 5. MENU DATA WITH .jpg IMAGES
+    // 5. MENU DATA WITH .jpg IMAGES (Only on menu pages)
     // ============================================================
     const isMenuPage = window.location.pathname.includes('menu.html') || 
                        window.location.pathname.endsWith('/menu') ||
@@ -261,29 +261,36 @@
     }
 
     // ============================================================
-    // 7. ACTIVE NAV LINK ON SCROLL
+    // 7. ACTIVE NAV LINK ON SCROLL (Only on index.html)
     // ============================================================
-    const sections = ['home', 'about', 'menu', 'howto', 'contact'];
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const isIndexPage = window.location.pathname.includes('index.html') || 
+                        window.location.pathname.endsWith('/') ||
+                        window.location.pathname === '' ||
+                        document.getElementById('home') !== null;
 
-    window.addEventListener('scroll', function() {
-        let current = 'home';
-        sections.forEach(id => {
-            const section = document.getElementById(id);
-            if (section) {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 150) {
-                    current = id;
+    if (isIndexPage) {
+        const sections = ['home', 'about', 'menu', 'howto', 'contact'];
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        window.addEventListener('scroll', function() {
+            let current = 'home';
+            sections.forEach(id => {
+                const section = document.getElementById(id);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 150) {
+                        current = id;
+                    }
                 }
-            }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
         });
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    });
+    }
 
     // ============================================================
     // 8. INITIALIZATION

@@ -155,7 +155,6 @@ header {
     gap: 16px;
 }
 
-/* ===== LOGO - IMAGE AND TEXT ON SAME LINE ===== */
 .logo {
     display: flex;
     align-items: center;
@@ -199,9 +198,6 @@ header {
     text-transform: uppercase;
 }
 
-/* ============================================ */
-/* NAVIGATION */
-/* ============================================ */
 .nav-menu {
     display: flex;
     gap: 32px;
@@ -252,9 +248,6 @@ header {
     color: var(--primary);
 }
 
-/* ============================================ */
-/* LANGUAGE SWITCH */
-/* ============================================ */
 .lang-switch {
     display: flex;
     gap: 4px;
@@ -300,7 +293,7 @@ header {
 }
 
 /* ============================================ */
-/* HERO - WITH LOGO BACKGROUND (6% OPACITY) */
+/* HERO */
 /* ============================================ */
 .hero {
     background: linear-gradient(145deg, #0f1a12 0%, #1a2e22 40%, #234a32 70%, #1a2e22 100%);
@@ -312,7 +305,6 @@ header {
     align-items: center;
 }
 
-/* Logo as full coverage background - 6% opacity */
 .hero-logo-bg {
     position: absolute;
     inset: 0;
@@ -325,7 +317,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Dark overlay on top of logo for readability */
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -343,7 +334,6 @@ header {
     margin: 0 auto;
 }
 
-/* ===== HERO BADGE - NO ICON ===== */
 .hero-badge {
     display: inline-block;
     background: rgba(255, 255, 255, 0.08);
@@ -382,7 +372,6 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-/* ===== HERO FEATURES ===== */
 .hero-features {
     display: flex;
     justify-content: center;
@@ -469,34 +458,183 @@ header {
 }
 
 /* ============================================ */
-/* ABOUT */
+/* ABOUT - Updated with new content */
 /* ============================================ */
 .about-section {
     padding: 20px 0 60px;
 }
 
 .about-box {
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
     background: var(--white);
     padding: 48px 44px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.about-icon {
-    font-size: 3rem;
-    margin-bottom: 16px;
-    color: var(--primary);
+.about-content {
+    text-align: left;
 }
 
-.about-box p {
+.about-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-align: center;
+}
+
+.about-content p {
     font-size: 1.05rem;
     color: #444;
-    line-height: 1.8;
+    line-height: 1.9;
     font-family: 'Inter', sans-serif;
+    margin-bottom: 18px;
+}
+
+.about-content p:last-of-type {
+    margin-bottom: 30px;
+}
+
+/* Mission & Vision */
+.about-mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 30px 0 30px;
+}
+
+.mission-box,
+.vision-box {
+    background: var(--light-bg);
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+}
+
+.mission-box h4,
+.vision-box h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.mission-box p,
+.vision-box p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0;
+}
+
+/* Why Choose */
+.about-why-choose {
+    margin: 30px 0 25px;
+}
+
+.about-why-choose h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 14px;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-align: center;
+}
+
+.about-why-choose ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.about-why-choose ul li {
+    font-size: 0.98rem;
+    color: #444;
+    font-family: 'Inter', sans-serif;
+    padding: 6px 0;
+    position: relative;
+    padding-left: 24px;
+}
+
+.about-why-choose ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Footer Text */
+.about-footer-text {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid var(--light-gray);
+}
+
+.about-footer-text p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 0;
+}
+
+/* ABOUT RESPONSIVE */
+@media (max-width: 768px) {
+    .about-box {
+        padding: 30px 20px;
+    }
+    
+    .about-heading {
+        font-size: 1.4rem;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+    }
+    
+    .about-mission-vision {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .about-why-choose ul {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+    
+    .about-why-choose ul li {
+        font-size: 0.9rem;
+    }
+    
+    .about-footer-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-box {
+        padding: 20px 16px;
+    }
+    
+    .about-heading {
+        font-size: 1.2rem;
+    }
+    
+    .mission-box,
+    .vision-box {
+        padding: 16px 18px;
+    }
 }
 
 /* ============================================ */
@@ -552,9 +690,6 @@ header {
     background: var(--white);
 }
 
-/* ============================================ */
-/* PRODUCT DISPLAY */
-/* ============================================ */
 #productDisplay {
     margin-top: 20px;
 }
@@ -727,9 +862,6 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-/* ============================================ */
-/* DELIVERY BOX */
-/* ============================================ */
 .delivery-box {
     background: var(--primary-pale);
     padding: 28px 36px;
@@ -1166,9 +1298,6 @@ footer {
     }
     .section-title {
         font-size: 1.5rem;
-    }
-    .about-box {
-        padding: 24px 18px;
     }
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
