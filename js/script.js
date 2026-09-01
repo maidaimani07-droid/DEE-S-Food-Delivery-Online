@@ -88,7 +88,7 @@
     });
 
     // ============================================================
-    // 5. MENU DATA - All images use .jpg format, NO EMOJIS
+    // 5. MENU DATA - All images use .jpg format
     // ============================================================
     const isMenuPage = window.location.pathname.includes('menu.html') || 
                        window.location.pathname.endsWith('/menu') ||
@@ -172,9 +172,6 @@
         const categoryTitle = document.getElementById('categoryTitle');
         const categoryIcon = document.getElementById('categoryIcon');
 
-        // ============================================================
-        // RENDER CATEGORIES - NO EMOJIS
-        // ============================================================
         function renderCategories() {
             if (!categoryGrid) return;
             categoryGrid.innerHTML = '';
@@ -183,38 +180,31 @@
                 const card = document.createElement('div');
                 card.className = 'category-card';
                 card.innerHTML = `
-                    <div class="category-icon-wrapper">
-                        <i class="fas ${data.icon}"></i>
-                    </div>
+                    <img src="${data.image}" alt="${cat}" class="category-image" onerror="this.style.display='none'">
                     <div class="category-name">${cat}</div>
                 `;
                 card.dataset.category = cat;
                 card.addEventListener('click', function() {
                     showCategory(this.dataset.category);
-                    document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
-                    this.classList.add('active');
                 });
                 categoryGrid.appendChild(card);
             });
-            console.log('✅ Categories rendered with Font Awesome icons');
+            console.log('✅ Categories rendered with .jpg images');
         }
 
-        // ============================================================
-        // SHOW CATEGORY PRODUCTS
-        // ============================================================
         function showCategory(cat) {
             const data = menuData[cat];
             if (!data) return;
-            
             if (categoryIcon) categoryIcon.innerHTML = `<i class="fas ${data.icon}"></i>`;
             if (categoryTitle) categoryTitle.textContent = cat;
-            
             if (!productGrid) return;
             productGrid.innerHTML = '';
 
             data.items.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
+                
+                // Use item-specific .jpg image
                 const itemImage = item.image || data.image;
                 
                 card.innerHTML = `
@@ -236,12 +226,7 @@
                 });
                 productGrid.appendChild(card);
             });
-            
-            const display = document.getElementById('productDisplay');
-            if (display) {
-                display.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            console.log('✅ Showing category:', cat, 'with', data.items.length, 'items');
+            console.log('✅ Showing category:', cat, 'with .jpg product images');
         }
 
         function generateWhatsAppOrder(itemName, price) {
@@ -251,14 +236,7 @@
         }
 
         renderCategories();
-        
-        // Auto-select first category (Chips) on page load
-        setTimeout(function() {
-            const firstCategory = document.querySelector('.category-card');
-            if (firstCategory) {
-                firstCategory.click();
-            }
-        }, 100);
+        showCategory('Chips');
     }
 
     // ============================================================
@@ -290,7 +268,7 @@
     }
 
     // ============================================================
-    // 7. ACTIVE NAV LINK ON SCROLL
+    // 7. ACTIVE NAV LINK ON SCROLL (Only on index.html)
     // ============================================================
     const isIndexPage = window.location.pathname.includes('index.html') || 
                         window.location.pathname.endsWith('/') ||
@@ -327,11 +305,13 @@
     function init() {
         console.log('🚀 DEE\'S FOOD DELIVERY Initialized');
 
+        // Update footer year
         const yearEl = document.getElementById('currentYear');
         if (yearEl) {
             yearEl.textContent = new Date().getFullYear();
         }
 
+        // Set language
         setLanguage('en');
     }
 
