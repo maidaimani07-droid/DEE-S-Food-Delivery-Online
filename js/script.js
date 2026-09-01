@@ -88,7 +88,7 @@
     });
 
     // ============================================================
-    // 5. MENU DATA WITH .jpg IMAGES (Only on menu pages)
+    // 5. MENU DATA - Categories use .jpg, Products use .jpeg
     // ============================================================
     const isMenuPage = window.location.pathname.includes('menu.html') || 
                        window.location.pathname.endsWith('/menu') ||
@@ -100,67 +100,67 @@
                 image: "images/samosa.jpg",
                 icon: "fa-utensils",
                 items: [
-                    { name: "Samosa with Fish", desc: "Crispy samosa with fish filling", price: 250 },
-                    { name: "Samosa with Irish Potato", desc: "Classic potato samosa", price: 200 },
-                    { name: "Samosa with Meat", desc: "Minced meat samosa", price: 280 },
-                    { name: "Samosa with Goat Meat", desc: "Tender goat meat samosa", price: 320 },
-                    { name: "Samosa with Chicken", desc: "Spiced chicken samosa", price: 290 }
+                    { name: "Samosa with Fish", desc: "Crispy samosa with fish filling", price: 250, image: "images/samosa-fish.jpeg" },
+                    { name: "Samosa with Irish Potato", desc: "Classic potato samosa", price: 200, image: "images/samosa-potato.jpeg" },
+                    { name: "Samosa with Meat", desc: "Minced meat samosa", price: 280, image: "images/samosa-meat.jpeg" },
+                    { name: "Samosa with Goat Meat", desc: "Tender goat meat samosa", price: 320, image: "images/samosa-goat.jpeg" },
+                    { name: "Samosa with Chicken", desc: "Spiced chicken samosa", price: 290, image: "images/samosa-chicken.jpeg" }
                 ]
             },
             "Fried Rice": {
                 image: "images/fried-rice.jpg",
                 icon: "fa-utensil-spoon",
                 items: [
-                    { name: "Fried Rice with Chicken", desc: "Wok-fried rice with chicken", price: 350 },
-                    { name: "Fried Rice with Beef", desc: "Beef fried rice", price: 380 },
-                    { name: "Fried Rice with Fish", desc: "Fish fried rice", price: 360 },
-                    { name: "Fried Rice with Vegetables", desc: "Vegetable fried rice", price: 300 },
-                    { name: "Special Fried Rice", desc: "Chef's special fried rice", price: 420 }
+                    { name: "Fried Rice with Chicken", desc: "Wok-fried rice with chicken", price: 350, image: "images/fried-rice-chicken.jpeg" },
+                    { name: "Fried Rice with Beef", desc: "Beef fried rice", price: 380, image: "images/fried-rice-beef.jpeg" },
+                    { name: "Fried Rice with Fish", desc: "Fish fried rice", price: 360, image: "images/fried-rice-fish.jpeg" },
+                    { name: "Fried Rice with Vegetables", desc: "Vegetable fried rice", price: 300, image: "images/fried-rice-veg.jpeg" },
+                    { name: "Special Fried Rice", desc: "Chef's special fried rice", price: 420, image: "images/fried-rice-special.jpeg" }
                 ]
             },
             "Meat Pie": {
                 image: "images/meat-pie.jpg",
                 icon: "fa-pie-chart",
                 items: [
-                    { name: "Chicken Meat Pie", desc: "Flaky pie with chicken", price: 180 },
-                    { name: "Beef Meat Pie", desc: "Beef pie", price: 190 },
-                    { name: "Goat Meat Pie", desc: "Goat meat pie", price: 210 },
-                    { name: "Special Meat Pie", desc: "Special recipe pie", price: 230 }
+                    { name: "Chicken Meat Pie", desc: "Flaky pie with chicken", price: 180, image: "images/meat-pie-chicken.jpeg" },
+                    { name: "Beef Meat Pie", desc: "Beef pie", price: 190, image: "images/meat-pie-beef.jpeg" },
+                    { name: "Goat Meat Pie", desc: "Goat meat pie", price: 210, image: "images/meat-pie-goat.jpeg" },
+                    { name: "Special Meat Pie", desc: "Special recipe pie", price: 230, image: "images/meat-pie-special.jpeg" }
                 ]
             },
             "Cakes": {
                 image: "images/cakes.jpg",
                 icon: "fa-birthday-cake",
                 items: [
-                    { name: "Birthday Cakes", desc: "Custom birthday cake", price: 500 },
-                    { name: "Chocolate Cake", desc: "Rich chocolate cake", price: 350 },
-                    { name: "Vanilla Cake", desc: "Classic vanilla cake", price: 300 },
-                    { name: "Red Velvet Cake", desc: "Red velvet with cream cheese", price: 400 },
-                    { name: "Small Cakes", desc: "Small portion cakes", price: 150 },
-                    { name: "Large Cakes", desc: "Large celebration cake", price: 650 }
+                    { name: "Birthday Cakes", desc: "Custom birthday cake", price: 500, image: "images/cake-birthday.jpeg" },
+                    { name: "Chocolate Cake", desc: "Rich chocolate cake", price: 350, image: "images/cake-chocolate.jpeg" },
+                    { name: "Vanilla Cake", desc: "Classic vanilla cake", price: 300, image: "images/cake-vanilla.jpeg" },
+                    { name: "Red Velvet Cake", desc: "Red velvet with cream cheese", price: 400, image: "images/cake-redvelvet.jpeg" },
+                    { name: "Small Cakes", desc: "Small portion cakes", price: 150, image: "images/cake-small.jpeg" },
+                    { name: "Large Cakes", desc: "Large celebration cake", price: 650, image: "images/cake-large.jpeg" }
                 ]
             },
             "Mandasi": {
                 image: "images/mandasi.jpg",
                 icon: "fa-doughnut",
                 items: [
-                    { name: "Plain Mandasi", desc: "Traditional plain mandasi", price: 80 },
-                    { name: "Sweet Mandasi", desc: "Sweetened mandasi", price: 100 },
-                    { name: "Large Mandasi", desc: "Large size mandasi", price: 120 },
-                    { name: "Small Mandasi", desc: "Bite-size mandasi", price: 60 }
+                    { name: "Plain Mandasi", desc: "Traditional plain mandasi", price: 80, image: "images/mandasi-plain.jpeg" },
+                    { name: "Sweet Mandasi", desc: "Sweetened mandasi", price: 100, image: "images/mandasi-sweet.jpeg" },
+                    { name: "Large Mandasi", desc: "Large size mandasi", price: 120, image: "images/mandasi-large.jpeg" },
+                    { name: "Small Mandasi", desc: "Bite-size mandasi", price: 60, image: "images/mandasi-small.jpeg" }
                 ]
             },
             "Chips": {
                 image: "images/chips.jpg",
                 icon: "fa-fries",
                 items: [
-                    { name: "Dry Chips", desc: "Crispy dry chips", price: 150 },
-                    { name: "Chips with Chicken", desc: "Crispy chips with chicken", price: 350 },
-                    { name: "Chips with Salad", desc: "Chips with fresh salad", price: 250 },
-                    { name: "Chips with Fish", desc: "Chips with fried fish", price: 340 },
-                    { name: "Chips with Meat", desc: "Chips with meat", price: 360 },
-                    { name: "Chips with Egg", desc: "Chips with fried egg", price: 220 },
-                    { name: "Special Chips", desc: "Loaded special chips", price: 400 }
+                    { name: "Dry Chips", desc: "Crispy dry chips", price: 150, image: "images/dry-chips.jpeg" },
+                    { name: "Chips with Chicken", desc: "Crispy chips with chicken", price: 350, image: "images/chips-chicken.jpeg" },
+                    { name: "Chips with Salad", desc: "Chips with fresh salad", price: 250, image: "images/chips-salad.jpeg" },
+                    { name: "Chips with Fish", desc: "Chips with fried fish", price: 340, image: "images/chips-fish.jpeg" },
+                    { name: "Chips with Meat", desc: "Chips with meat", price: 360, image: "images/chips-meat.jpeg" },
+                    { name: "Chips with Egg", desc: "Chips with fried egg", price: 220, image: "images/chips-egg.jpeg" },
+                    { name: "Special Chips", desc: "Loaded special chips", price: 400, image: "images/special-chips.jpeg" }
                 ]
             }
         };
@@ -203,8 +203,15 @@
             data.items.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
+                
+                // Use item-specific .jpeg image, fallback to category image, then icon
+                const itemImage = item.image || data.image;
+                
                 card.innerHTML = `
-                    <div class="food-img"><i class="fas ${data.icon}"></i></div>
+                    <div class="food-img">
+                        <img src="${itemImage}" alt="${item.name}" class="product-food-image" 
+                             onerror="this.parentElement.innerHTML='<i class=\\'fas ${data.icon}\\'></i>'">
+                    </div>
                     <h4>${item.name}</h4>
                     <div class="desc">${item.desc}</div>
                     <div class="price">MT ${item.price}</div>
@@ -219,7 +226,7 @@
                 });
                 productGrid.appendChild(card);
             });
-            console.log('✅ Showing category:', cat);
+            console.log('✅ Showing category:', cat, 'with', data.items.length, 'items');
         }
 
         function generateWhatsAppOrder(itemName, price) {

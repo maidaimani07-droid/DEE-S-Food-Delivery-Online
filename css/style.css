@@ -458,7 +458,7 @@ header {
 }
 
 /* ============================================ */
-/* ABOUT - Updated with new content */
+/* ABOUT */
 /* ============================================ */
 .about-section {
     padding: 20px 0 60px;
@@ -499,7 +499,6 @@ header {
     margin-bottom: 30px;
 }
 
-/* Mission & Vision */
 .about-mission-vision {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -533,7 +532,6 @@ header {
     margin-bottom: 0;
 }
 
-/* Why Choose */
 .about-why-choose {
     margin: 30px 0 25px;
 }
@@ -573,7 +571,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* Footer Text */
 .about-footer-text {
     text-align: center;
     margin-top: 30px;
@@ -713,6 +710,9 @@ header {
     color: var(--dark);
 }
 
+/* ============================================ */
+/* PRODUCT CARDS WITH IMAGES */
+/* ============================================ */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -737,19 +737,34 @@ header {
 }
 
 .product-card .food-img {
-    font-size: 2.8rem;
-    background: var(--light-bg);
     width: 76px;
     height: 76px;
-    line-height: 76px;
-    border-radius: 50%;
     margin: 0 auto 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--light-bg);
     transition: var(--transition);
-    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .product-card:hover .food-img {
     transform: scale(1.05);
+}
+
+.product-card .food-img i {
+    font-size: 2.8rem;
+    color: var(--primary);
+    line-height: 76px;
+    display: block;
 }
 
 .product-card h4 {
@@ -1320,8 +1335,10 @@ footer {
     .product-card .food-img {
         width: 52px;
         height: 52px;
-        line-height: 52px;
+    }
+    .product-card .food-img i {
         font-size: 2rem;
+        line-height: 52px;
     }
     .product-card h4 {
         font-size: 0.9rem;
